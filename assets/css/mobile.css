@@ -1,0 +1,58 @@
+/* Mweb layout (max-width 819px or coarse pointer). Nav block copied from fever-watch mobile.css. */
+  body { padding-top: 56px; background: var(--pe-bg); }
+
+  .fw-nav { position: fixed; top: 0; left: 0; right: 0; background: var(--pe-green); z-index: 40; }
+  .navin { height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; }
+  .navin img.pe-mark { height: 20px; width: auto; display: block; }
+  .pe-rule { width: 1px; height: 16px; background: rgba(255,255,255,.45); flex-shrink: 0; }
+  .fw-word { color: #fff; font-family: var(--font); font-size: 15px; font-weight: 600; letter-spacing: .2px; line-height: 1; white-space: nowrap; }
+  .pe-burger { width: 40px; height: 40px; border: none; background: transparent; color: #fff; font-size: 22px; line-height: 1; cursor: pointer; display: grid; place-items: center; padding: 0; }
+  .pe-logo { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+
+  /* PharmEasy hamburger menu (nav structure + links ported from Mosquito Watch) */
+  .pe-topnav { display: none; position: fixed; top: 56px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 2px; background: var(--pe-green-dark); padding: 8px; box-shadow: 0 12px 22px rgba(0,0,0,.24); z-index: 50; max-height: calc(100vh - 56px); overflow-y: auto; }
+  .pe-topnav.open { display: flex; }
+  .pe-nav-item { position: static; }
+  .pe-nav-btn, .pe-nav-link { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 5px; background: none; border: 0; color: #fff; font-family: var(--font); font-size: 15px; font-weight: 600; cursor: pointer; padding: 12px; border-radius: 8px; text-decoration: none; }
+  .pe-nav-btn:hover, .pe-nav-link:hover, .pe-nav-item.open .pe-nav-btn { background: rgba(255,255,255,.12); }
+  .pe-caret { font-size: 9px; transition: transform .15s; }
+  .pe-nav-item.open .pe-caret { transform: rotate(180deg); }
+  .pe-nav-drop { display: none; background: rgba(255,255,255,.06); border-radius: 8px; margin: 2px 0 4px; padding: 4px 4px 4px 10px; }
+  .pe-nav-item.open .pe-nav-drop { display: block; }
+  .pe-nav-drop a { display: block; padding: 11px 12px; color: #eafffb; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 7px; }
+  .pe-nav-drop a:hover { background: rgba(255,255,255,.12); color: #fff; }
+
+  .kyv-hero { background: linear-gradient(180deg, #0A534F 0%, #0A534F 6%, #246965 38%, #307471 51%, #559190 76%, #89B8B9 100%); padding: 20px 16px 22px; }
+  .kyv-hero h1 { font-size: 25px; line-height: 1.26; margin: 12px 0 8px; }
+  .kyv-hero .kyv-lede { font-size: 13.5px; line-height: 1.55; margin: 0; }
+  .kyv-trust { margin: 14px 0 16px; }
+  .kyv-finder { min-height: 470px; padding: 16px; }
+  .kyv-chips[data-group="age"] { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+  .kyv-chips[data-group="age"] .kyv-chip { padding: 8px 4px; align-items: center; font-size: 12.5px; text-align: center; border-radius: 10px; }
+  .kyv-chips[data-group="for_whom"], .kyv-chips[data-group="gender"] { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+  .kyv-chips[data-group="gender"] { grid-template-columns: 1fr 1fr 1.5fr; }
+  .kyv-chips[data-group="for_whom"] .kyv-chip, .kyv-chips[data-group="gender"] .kyv-chip { align-items: center; text-align: center; border-radius: 10px; padding: 8px 6px; }
+  .kyv-chips[data-group="flags"] { gap: 8px; }
+  .kyv-chips[data-group="flags"] .kyv-chip { min-height: 58px; }
+
+  .kyv-wrap { padding: 26px 16px; }
+  .kyv-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .kyv-explore-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+  .kyv-ecard { padding: 14px; }
+  .kyv-ecard.is-hidden .kyv-eteaser { display: none; }
+  .kyv-ecard.is-hidden .kyv-vhook { font-size: 14px; margin-top: 8px; }
+  .kyv-ecard.is-open { grid-column: 1 / -1; }
+  .kyv-ecard .kyv-pill { top: 12px; right: 12px; font-size: 9.5px; }
+  .kyv-plan-foot { flex-direction: column; align-items: stretch; text-align: center; }
+  .kyv-plan-foot .kyv-cta-sm { width: 100%; }
+  .kyv-alt { background: #fff; border-top: 1px solid var(--pe-line); border-bottom: 1px solid var(--pe-line); }
+  .kyv-two > * + * { margin-top: 26px; }
+  .kyv-doc .kyv-cta { margin-top: 16px; }
+
+  .footer { margin-top: 0; padding-bottom: 76px; }
+  .footin { padding: 26px 16px 8px; display: grid; grid-template-columns: 1fr; gap: 24px; }
+  .footbarin { padding: 16px 16px 24px; }
+
+  .kyv-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 35; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: #fff; box-shadow: 0 -6px 18px rgba(0,0,0,.08); transform: translateY(110%); transition: transform .22s ease; }
+  .kyv-sticky.is-show { transform: none; }
+  .kyv-sticky .kyv-cta { margin: 0; height: 48px; }
